@@ -1,3 +1,10 @@
+# Test project
+
+To test this project from the client side (Frontend auth):
+My user: swapnamadd@test.com pwd:Mother123
+User can be switched for test purposes:
+Test user: guestuser@test.com pwd:Guest123
+
 # Serverless TODO
 
 To implement this project, you need to implement a simple TODO application using AWS Lambda and Serverless framework. Search for all comments starting with the `TODO:` in the code to find the placeholders that you need to implement.
