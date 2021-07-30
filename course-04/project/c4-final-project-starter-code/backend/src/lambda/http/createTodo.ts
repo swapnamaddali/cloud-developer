@@ -13,6 +13,20 @@ export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEven
   //new request from the event
   const newTodo: CreateTodoRequest = JSON.parse(event.body);
 
+  //const newItem: {"message":"missing required property"}
+
+  if (!newTodo.name) {
+    return {
+        statusCode: 400,
+        headers: {
+            'Content-Type': 'application/json', 
+            'Access-Control-Allow-Origin': '*'
+        },
+      body: JSON.stringify({
+            item: newTodo
+        })
+    }
+  }
   // Get user id
   const authHeader = event.headers.Authorization;
   const jwtToken = getToken(authHeader);
